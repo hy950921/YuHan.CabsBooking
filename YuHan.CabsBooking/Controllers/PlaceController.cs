@@ -59,5 +59,18 @@ namespace YuHan.CabsBooking.API.Controllers
             return Ok(res);
         }
 
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<IActionResult> GetPlaceById(int id)
+        {
+            var res = await _placeService.GetById(id);
+
+            if (res == null)
+            {
+                return NotFound("404 NOT FOUND PLACE");
+            }
+
+            return Ok(res);
+        }
     }
 }

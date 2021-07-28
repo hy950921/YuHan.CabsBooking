@@ -56,9 +56,14 @@ namespace YuHan.CabsBooking.Infrastructure.Services
             return res;
         }
 
-        public Task<PlaceResponseModel> GetById(int id)
+        public async Task<PlaceResponseModel> GetById(int id)
         {
-            throw new NotImplementedException();
+            var place = await _placeRepository.GetByIdAsync(id);
+            if (place == null)
+            {
+                throw new Exception("NO PLACE");
+            }
+            return new PlaceResponseModel { PlaceId = place.PlaceId, PlaceName = place.PlaceName };
         }
 
         public async Task<IEnumerable<PlaceResponseModel>> ListAll()

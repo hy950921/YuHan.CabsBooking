@@ -60,7 +60,7 @@ namespace YuHan.CabsBooking.Infrastructure.Services
             var cabEntity = await _cabTypeRepository.GetByIdAsync(id);
             if (cabEntity == null)
             {
-                return null;
+                throw new Exception("NO CABTYPE");
             }
             return new CabTypeResponseModel { CabTypeId = cabEntity.CabTypeId, CabTypeName = cabEntity.CabTypeName };
         }

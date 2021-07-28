@@ -62,5 +62,19 @@ namespace YuHan.CabsBooking.API.Controllers
 
             return Ok(res);
         }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<IActionResult> GetCabTypeById(int id)
+        {
+            var res = await _cabTypeService.GetById(id);
+
+            if(res == null)
+            {
+                return NotFound("404 NOT FOUND CABTYPE");
+            }
+
+            return Ok(res);
+        }
     }
 }
