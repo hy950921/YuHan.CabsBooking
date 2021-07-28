@@ -16,12 +16,13 @@ namespace YuHan.CabsBooking.Infrastructure.Services
         private readonly IBookingRepository _bookingRepository;
         private readonly IPlaceRepository _placeRepository;
         private readonly ICabTypeRepository _cabTypeRepository;
-
-        public BookingService(IBookingRepository bookingRepository, IPlaceRepository placeRepository, ICabTypeRepository cabTypeRepository)
+        private readonly IBookingHistoryService _bookingHistoryService;
+        public BookingService(IBookingRepository bookingRepository, IPlaceRepository placeRepository, ICabTypeRepository cabTypeRepository, IBookingHistoryService bookingHistoryService)
         {
             _bookingRepository = bookingRepository;
             _placeRepository = placeRepository;
             _cabTypeRepository = cabTypeRepository;
+            _bookingHistoryService = bookingHistoryService;
         }
 
         public async Task<BookingResponseModel> Add(BookingAddRequestModel model)
@@ -185,6 +186,7 @@ namespace YuHan.CabsBooking.Infrastructure.Services
             {
 
                 Id = updatedBooking.Id,
+                Email = updatedBooking.Email,
                 BookingDate = updatedBooking.BookingDate,
                 BookingTime = updatedBooking.BookingTime,
                 FromPlaceId = updatedBooking.FromPlaceId,
@@ -202,6 +204,27 @@ namespace YuHan.CabsBooking.Infrastructure.Services
                 //CabType = new CabTypeResponseModel { CabTypeId = updatedBooking.CabType.CabTypeId, CabTypeName = updatedBooking.CabType.CabTypeName }
 
             };
+            if (res.Status.Contains("completed"))
+            {
+                var addedbBookingHistory = new BookingHistoryAddRequestModel
+                {
+                    Email = res.Email,
+                    BookingDate = res.BookingDate,
+                    BookingTime = res.BookingTime,
+                    FromPlaceId = res.FromPlaceId,
+                    ToPlaceId = res.ToPlaceId,
+                    PickUpAddress = res.PickUpAddress,
+                    PickupDate = res.PickupDate,
+                    PickupTime = res.PickupTime,
+                    CabTypeId = res.CabTypeId,
+                    Status = res.Status,
+                    CompTime = "00:00",
+                    Charge = 0,
+                    Feedback = "System Auto Generated"
+                };
+                await _bookingHistoryService.Add(addedbBookingHistory);
+                await Delete(res.Id);
+            }
             return res;
         }
 
@@ -239,5 +262,7 @@ namespace YuHan.CabsBooking.Infrastructure.Services
             }
             return bookingsRes;
         }
+
+        
     }
 }

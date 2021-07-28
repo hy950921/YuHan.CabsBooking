@@ -17,13 +17,13 @@
 <div class="rounded">
     <div class="container-fluid bg-light">
         
-        <h6 class="list-group-item">ID | Date | Bookingtime | address | pickupTime | From | To | CarType  </h6>
+        <h6 class="list-group-item">ID | Date | Bookingtime | address | pickupTime | From | To | CarType | Status </h6>
 
         <div class="list-group">
             @foreach (var booking in Model)
             {
                 <a class="list-group-item">@booking.Id | @booking.BookingDate.ToString().Substring(0,9) | @booking.BookingTime | 
-                @booking.PickUpAddress | @booking.PickupTime | @booking.PickUpCity | @booking.DestinationCity | @booking.CarMake </a>
+                @booking.PickUpAddress | @booking.PickupTime | @booking.PickUpCity | @booking.DestinationCity | @booking.CarMake | @booking.Status </a>
             
             }
 

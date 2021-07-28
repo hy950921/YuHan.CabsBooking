@@ -15,5 +15,7 @@ namespace YuHan.CabsBooking.ApplicationCore.ServiceInterfaces
         Task<BookingResponseModel> Add(BookingAddRequestModel model);
         Task<BookingResponseModel> Delete(int id);
         Task<IEnumerable<BookingResponseModel>>  GetBookingsByCabId(int id);
+
+        //Task<bool> IsBookingCompleted(BookingResponseModel model);
     }
 }
