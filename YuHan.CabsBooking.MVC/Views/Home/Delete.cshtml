@@ -1,0 +1,32 @@
+﻿@model YuHan.CabsBooking.ApplicationCore.Models.Request.CabTypeUpdateRequestModel
+
+@{
+    ViewData["Title"] = "Delete CarType";
+}
+
+<h1>
+    @ViewData["Title"]
+</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="CabTypeId"></label>
+                <input asp-for="CabTypeId" class="form-control" />
+                <span asp-validation-for="CabTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to Home Page</a>
+</div>

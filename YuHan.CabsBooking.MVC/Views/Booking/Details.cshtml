@@ -1,0 +1,30 @@
+﻿@model List<YuHan.CabsBooking.ApplicationCore.Models.Response.BookingResponseModel>
+@{
+    ViewData["Title"] = "Booking Details By CabType Id";
+}
+
+<h1>
+    @ViewData["Title"]
+</h1>
+
+
+<div class="rounded">
+    <div class="container-fluid bg-light">
+
+        <h6 class="list-group-item">ID | Date | Booktime | Picktime | address | From | To | CarType  </h6>
+
+        <div class="list-group">
+            @foreach (var booking in Model)
+            {
+            <li class="list-group-item">
+                @booking.Id | @booking.BookingDate.ToString().Substring(0, 9) | @booking.BookingTime |
+                @booking.PickupTime | @booking.PickUpAddress | @booking.FromPlace.PlaceName | @booking.ToPlace.PlaceName | @booking.CarMake
+            </li>
+
+            }
+
+        </div>
+
+
+    </div>
+</div>

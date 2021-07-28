@@ -1,0 +1,31 @@
+﻿
+@model List<YuHan.CabsBooking.ApplicationCore.Models.Response.CabTypeResponseModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div>
+    <h1 style="display:inline-block; margin:10px">
+        @ViewData["Title"]
+    </h1>
+    <a asp-controller="Home" asp-action="Add" class="btn btn-primary btn-sm">Add</a>
+    <a asp-controller="Home" asp-action="Update" class="btn btn-primary btn-sm">Update</a>
+    <a asp-controller="Home" asp-action="Delete" class="btn btn-primary btn-sm">Delete</a>
+</div>
+
+<div class="rounded">
+    <div class="container-fluid bg-light">
+        
+        <div class="list-group">
+            @foreach (var cab in Model)
+            {
+                <a asp-controller="Booking" asp-action="Details" asp-route-id="@cab.CabTypeId" class="list-group-item list-group-item-action">@cab.CabTypeId | @cab.CabTypeName </a>
+            }
+
+        </div>
+
+
+    </div>
+</div>

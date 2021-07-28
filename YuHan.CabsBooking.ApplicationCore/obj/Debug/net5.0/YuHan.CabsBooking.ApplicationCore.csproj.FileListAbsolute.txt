@@ -1,0 +1,14 @@
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\bin\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.deps.json
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\bin\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.dll
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\bin\Debug\net5.0\ref\YuHan.CabsBooking.ApplicationCore.dll
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\bin\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.pdb
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\obj\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\obj\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\obj\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.AssemblyInfo.cs
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\obj\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\obj\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.dll
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\obj\Debug\net5.0\ref\YuHan.CabsBooking.ApplicationCore.dll
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\obj\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.pdb
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\bin\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.runtimeconfig.json
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\bin\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.runtimeconfig.dev.json
+C:\Users\hy199\source\repos\CabsBooking\YuHan.CabsBooking.ApplicationCore\obj\Debug\net5.0\YuHan.CabsBooking.ApplicationCore.genruntimeconfig.cache

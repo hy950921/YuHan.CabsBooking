@@ -1,0 +1,34 @@
+﻿@model List<YuHan.CabsBooking.ApplicationCore.Models.Response.PlaceResponseModel>
+@{
+    ViewData["Title"] = "Place Page";
+}
+
+<div>
+    <h1 style="display:inline-block; margin:10px">
+        @ViewData["Title"]
+    </h1>
+    <a asp-controller="Place" asp-action="Add" class="btn btn-primary btn-sm">Add</a>
+    <a asp-controller="Place" asp-action="Update" class="btn btn-primary btn-sm">Update</a>
+    <a asp-controller="Place" asp-action="Delete" class="btn btn-primary btn-sm">Delete</a>
+</div>
+
+
+<div class="rounded">
+    <div class="container-fluid bg-light">
+
+        <h6 class="list-group-item">ID | Place </h6>
+
+        <div class="list-group">
+            @foreach (var place in Model)
+            {
+                <li class="list-group-item">
+                   @place.PlaceId | @place.PlaceName
+                </li>
+
+            }
+
+        </div>
+
+
+    </div>
+</div>
